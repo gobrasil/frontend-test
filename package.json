@@ -1,0 +1,28 @@
+{
+  "name": "amil-frontend-test",
+  "version": "1.0.0",
+  "description": "Amil front-end test by renato mattos",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renatomattos2912/frontend-test.git"
+  },
+  "keywords": [
+    "amil"
+  ],
+  "author": "renatomattos2912",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/renatomattos2912/frontend-test/issues"
+  },
+  "homepage": "https://github.com/renatomattos2912/frontend-test#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.1",
+    "grunt-serve": "^0.1.6",
+    "jshint-stylish": "^2.2.1",
+    "load-grunt-tasks": "^3.5.2",
+    "time-grunt": "^1.4.0"
+  }
+}
