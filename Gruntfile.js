@@ -9,7 +9,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         watch: {
             sass: {
-                files: ['_sass/*.scss'],
+                files: ['desafio-1/_sass/*.scss'],
                 tasks: ['sass'],
                 options: {
                     livereload: true
@@ -19,7 +19,7 @@ module.exports = function (grunt) {
         sass: {
             dist: {
                 files: {
-                    'styles/style.css': '_sass/main.scss'
+                    'desafio-1/styles/style.css': 'desafio-1/_sass/main.scss'
                 }
             }
         },
