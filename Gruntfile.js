@@ -10,7 +10,19 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: ['desafio-1/_sass/*.scss'],
-                tasks: ['sass'],
+                tasks: ['sass', 'autoprefixer'],
+                options: {
+                    livereload: true
+                }
+            },
+            html: {
+                files: ['**/*.html'],
+                options: {
+                    livereload: true
+                }
+            },
+            js: {
+                files: ['desafio-2/**/*.js'],
                 options: {
                     livereload: true
                 }
@@ -20,6 +32,13 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     'desafio-1/styles/style.css': 'desafio-1/_sass/main.scss'
+                }
+            }
+        },
+        autoprefixer:{
+            dist:{
+                files:{
+                    'desafio-1/styles/style.css':'desafio-1/styles/style.css'
                 }
             }
         },

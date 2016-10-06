@@ -17,11 +17,10 @@
   "homepage": "https://github.com/renatomattos2912/frontend-test#readme",
   "devDependencies": {
     "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-sass": "^1.2.1",
-    "grunt-serve": "^0.1.6",
-    "jshint-stylish": "^2.2.1",
     "load-grunt-tasks": "^3.5.2",
     "time-grunt": "^1.4.0"
   }

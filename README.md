@@ -1,3 +1,25 @@
+# Projeto Renato Mattos - Amil
+
+## Para rodar
+1 - Tenha npm e grunt-cli instalados;
+- npm install -g grunt-cli
+
+2 - Instale as dependencias do projeto
+- npm install
+
+3 - Inicie o projeto
+- grunt
+
+4 - Abra o projeto no browser
+- http://localhost:9000
+
+obs: Não executei todos os detalhes da landing page pois me inscrevi bem 
+em cima da hora para a vaga e tive muito pouco tempo para executar as tarefas, 
+por isso me atentei a usar todos os recursos que vocês pretendem analisar, como organização
+e tecnologias utilizadas, caso tenham interesse em que eu finalize 100% as tarefas, 
+me deem mais um dia que termino.
+
+-------------------------
 # Teste Front-end - Amil
 Projeto de teste para seleção de candidatos(as) a desenvolvedor(a) Front-end na Amil.
 

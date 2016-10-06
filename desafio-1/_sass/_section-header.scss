@@ -1,0 +1,89 @@
+#header {
+  margin-bottom: 40px;
+  height: 100px;
+
+  #navbar {
+    background-color: #eeeeee;
+
+    #logo-area {
+      position: relative;
+      height: 50px;
+
+      #logo {
+        position: absolute;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+      }
+    }
+
+    #nav-area {
+      font-weight: 600;
+      font-size: 16px;
+      height: 50px;
+      padding: 10px 0 10px 0;
+      line-height: 30px;
+
+      #nav {
+        li {
+
+        }
+      }
+    }
+
+    #cta-area {
+      padding: 10px 0 10px 0;
+
+      #cta {
+        font-weight: 700;
+        font-size: 16px;
+        height: 30px;
+      }
+    }
+  }
+
+  #breadcrumb {
+    font-weight: 400;
+    font-size: 12px;
+
+    li {
+      &:last-child a {
+        content: " ";
+      }
+
+      a {
+        text-decoration: none;
+        padding: 10px 0 10px 65px;
+        position: relative;
+        display: block;
+        float: left;
+
+        &:after {
+          content: url('../svgs/seta.svg');
+          display: block;
+          width: 0;
+          height: 0;
+          position: absolute;
+          top: 50%;
+          margin-top: -50px;
+          left: 100%;
+          z-index: 2;
+        }
+
+        &:before {
+          content: url('../svgs/seta.svg');
+          display: block;
+          width: 0;
+          height: 0;
+          border-top: 42px solid transparent;
+          border-bottom: 50px solid transparent;
+          border-left: 30px solid transparent;
+          position: absolute;
+          top: 50%;
+          margin-top: -50px;
+          margin-left: 1px;
+          left: 100%;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
