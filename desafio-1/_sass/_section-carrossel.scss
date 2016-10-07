@@ -1,3 +1,8 @@
 #carrossel {
   margin-bottom: 40px;
+
+  .img-border-pink {
+    border: 3px solid $color-pink;
+    border-radius: 3px;
+  }
 }

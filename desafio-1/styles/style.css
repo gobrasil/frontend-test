@@ -1,6 +1,17 @@
 body {
   font-family: 'Open Sans', sans-serif; }
 
+h2:after, h3:after {
+  content: ' ';
+  display: block;
+  border: 1px solid #c9c9c9; }
+
+h2:after {
+  margin: 20px 0 20px 0; }
+
+h3:after {
+  margin: 10px 0 20px 0; }
+
 *,
 *:after,
 *:before {
@@ -86,63 +97,63 @@ a {
   margin-bottom: 40px;
   height: 100px; }
   #header #navbar {
-    background-color: #eeeeee; }
+    background-color: #eeeeee;
+    border-bottom: 1px solid #c9c9c9; }
     #header #navbar #logo-area {
       position: relative;
       height: 50px; }
       #header #navbar #logo-area #logo {
         position: absolute;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); }
+        height: 100px !important;
+        width: 100px;
+        padding: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        background-color: #ffffff; }
     #header #navbar #nav-area {
       font-weight: 600;
       font-size: 16px;
       height: 50px;
       padding: 10px 0 10px 0;
+      margin-left: -30px;
       line-height: 30px; }
+      #header #navbar #nav-area #nav li {
+        color: #898989; }
+      #header #navbar #nav-area #nav li + li::before {
+        content: " | "; }
     #header #navbar #cta-area {
       padding: 10px 0 10px 0; }
       #header #navbar #cta-area #cta {
         font-weight: 700;
         font-size: 16px;
-        height: 30px; }
+        padding: 0 10px 0 10px;
+        height: 30px;
+        width: 100%;
+        border: none;
+        color: #ffffff;
+        border-radius: 5px;
+        background-color: #f7941e; }
   #header #breadcrumb {
     font-weight: 400;
     font-size: 12px; }
     #header #breadcrumb li:last-child a {
       content: " "; }
+    #header #breadcrumb li:first-child a {
+      padding-left: 0; }
     #header #breadcrumb li a {
       text-decoration: none;
-      padding: 10px 0 10px 65px;
+      padding: 10px 0 10px 10px;
       position: relative;
       display: block;
       float: left; }
-      #header #breadcrumb li a:after {
-        content: url("../svgs/seta.svg");
-        display: block;
-        width: 0;
-        height: 0;
-        position: absolute;
-        top: 50%;
-        margin-top: -50px;
-        left: 100%;
-        z-index: 2; }
-      #header #breadcrumb li a:before {
-        content: url("../svgs/seta.svg");
-        display: block;
-        width: 0;
-        height: 0;
-        border-top: 42px solid transparent;
-        border-bottom: 50px solid transparent;
-        border-left: 30px solid transparent;
-        position: absolute;
-        top: 50%;
-        margin-top: -50px;
-        margin-left: 1px;
-        left: 100%;
-        z-index: 1; }
+      #header #breadcrumb li a img svg {
+        color: #898989;
+        fill: currentColor; }
 
 #carrossel {
   margin-bottom: 40px; }
+  #carrossel .img-border-pink {
+    border: 3px solid #ec007a;
+    border-radius: 3px; }
 
 #principal {
   margin-bottom: 40px; }
@@ -150,35 +161,108 @@ a {
     margin: 20px 0 20px; }
   #principal #content h2 {
     font-weight: 400;
-    font-size: 16px;
-    color: #898989; }
+    font-size: 22px;
+    color: #ec007a; }
   #principal #content p {
-    margin-bottom: 10px; }
+    margin-bottom: 40px;
+    color: #898989;
+    font-size: 14px;
+    font-weight: 400; }
+  #principal #content .cat-img {
+    border-radius: 15px; }
+  #principal #content .food-img {
+    margin-bottom: 40px; }
   #principal #sidebar {
-    border: 1px solid black;
+    border: 1px solid #c9c9c9;
     padding: 16px 10px 16px 10px; }
+    #principal #sidebar h3 {
+      font-size: 16px;
+      font-weight: 400;
+      color: #f7941e; }
+    #principal #sidebar ul li {
+      display: block;
+      font-size: 14px;
+      font-weight: 400;
+      color: #898989; }
+    #principal #sidebar .ul-title {
+      color: #20b7ce;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      margin-top: 20px; }
+      #principal #sidebar .ul-title .arrow::before {
+        content: '\25ba';
+        padding-right: 5px;
+        color: #f7941e; }
   #principal .img-text-inner {
     position: relative; }
     #principal .img-text-inner p {
       background-color: rgba(0, 0, 0, 0.65);
       position: absolute;
-      height: 30px;
+      height: 40px;
       width: 100%;
-      color: #FFF;
-      bottom: -5px;
-      padding: 5px 10px;
+      color: #ffffff !important;
+      text-align: center;
+      font-weight: 700 !important;
+      font-size: 14px !important;
+      bottom: 5px;
+      padding: 10px 10px;
       z-index: 1; }
-  #principal .block {
-    border: 1px solid black;
-    text-align: center;
-    height: 200px;
-    padding: 20px; }
-    #principal .block img {
-      width: 50px; }
-    #principal .block p {
-      margin-top: 16px; }
+  #principal #block-area {
+    margin-bottom: 80px; }
+    #principal #block-area .block {
+      border: 1px solid #f7941e;
+      text-align: center;
+      height: 166px;
+      padding: 20px; }
+      #principal #block-area .block img {
+        width: 50px; }
+      #principal #block-area .block p {
+        margin-top: 16px; }
 
-#pre-footer .ul-block li {
-  display: block; }
-  #pre-footer .ul-block li a {
+#pre-footer {
+  background-color: #ededed;
+  padding-top: 40px; }
+  #pre-footer h4 {
+    font-size: 16px;
+    font-weight: 400;
     color: #898989; }
+  #pre-footer h5 {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 20px 0 20px 0;
+    color: #898989; }
+  #pre-footer .ul-block {
+    height: 110px;
+    margin-bottom: 40px; }
+    #pre-footer .ul-block li {
+      display: block; }
+      #pre-footer .ul-block li a {
+        color: #898989;
+        font-size: 14px;
+        font-weight: 400; }
+  #pre-footer .all {
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 700;
+    color: #898989; }
+  #pre-footer #logos {
+    margin-top: 30px; }
+  #pre-footer hr {
+    margin: 30px 0 30px 0; }
+  #pre-footer .right {
+    float: right; }
+  #pre-footer #pre-footer-bottom {
+    margin-bottom: 30px; }
+    #pre-footer #pre-footer-bottom ul li {
+      color: #898989; }
+    #pre-footer #pre-footer-bottom ul li + li::before {
+      content: " | "; }
+
+#footer {
+  background-color: #c9c9c9;
+  color: #898989;
+  font-size: 11px;
+  font-weight: 400;
+  text-align: center;
+  padding: 20px 0 80px 0; }

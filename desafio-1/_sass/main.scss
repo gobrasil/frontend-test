@@ -1,13 +1,27 @@
-body {
-  font-family: 'Open Sans', sans-serif;
-}
-
 $color-texts: #898989;
 $color-border: #c9c9c9;
 $color-header: #eeeeee;
 $color-orange: #f7941e;
 $color-pink: #ec007a;
 $color-blue: #20b7ce;
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2:after, h3:after {
+  content:' ';
+  display:block;
+  border: 1px solid $color-border;
+}
+
+h2:after {
+  margin: 20px 0 20px 0;
+}
+
+h3:after {
+  margin: 10px 0 20px 0;
+}
 
 @import "normalize";
 @import "grid";

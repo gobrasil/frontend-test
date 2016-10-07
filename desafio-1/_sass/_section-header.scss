@@ -3,7 +3,8 @@
   height: 100px;
 
   #navbar {
-    background-color: #eeeeee;
+    background-color: $color-header;
+    border-bottom: 1px solid $color-border;
 
     #logo-area {
       position: relative;
@@ -11,7 +12,11 @@
 
       #logo {
         position: absolute;
-        box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+        height: 100px!important;
+        width: 100px;
+        padding: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        background-color: #ffffff;
       }
     }
 
@@ -20,11 +25,16 @@
       font-size: 16px;
       height: 50px;
       padding: 10px 0 10px 0;
+      margin-left: -30px;
       line-height: 30px;
 
       #nav {
         li {
+          color: $color-texts;
+        }
 
+        li + li::before {
+          content: " | ";
         }
       }
     }
@@ -35,7 +45,13 @@
       #cta {
         font-weight: 700;
         font-size: 16px;
+        padding: 0 10px 0 10px;
         height: 30px;
+        width: 100%;
+        border: none;
+        color: #ffffff;
+        border-radius: 5px;
+        background-color: $color-orange;
       }
     }
   }
@@ -49,39 +65,20 @@
         content: " ";
       }
 
+      &:first-child a {
+        padding-left: 0;
+      }
+
       a {
         text-decoration: none;
-        padding: 10px 0 10px 65px;
+        padding: 10px 0 10px 10px;
         position: relative;
         display: block;
         float: left;
 
-        &:after {
-          content: url('../svgs/seta.svg');
-          display: block;
-          width: 0;
-          height: 0;
-          position: absolute;
-          top: 50%;
-          margin-top: -50px;
-          left: 100%;
-          z-index: 2;
-        }
-
-        &:before {
-          content: url('../svgs/seta.svg');
-          display: block;
-          width: 0;
-          height: 0;
-          border-top: 42px solid transparent;
-          border-bottom: 50px solid transparent;
-          border-left: 30px solid transparent;
-          position: absolute;
-          top: 50%;
-          margin-top: -50px;
-          margin-left: 1px;
-          left: 100%;
-          z-index: 1;
+        img svg {
+          color: $color-texts;
+          fill: currentColor;
         }
       }
     }
