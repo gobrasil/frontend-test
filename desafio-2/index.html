@@ -2,68 +2,71 @@
 <html ng-app="app">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Front End - Desafio 2 - Amil</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 </head>
 
 <body ng-controller="AppController as app">
-  <form novalidate name="app.signupForm">
-    
+<form novalidate name="app.signupForm">
+
     <fieldset>
-      <legend>
-        <h3><i class="fa fa-user"></i> Dados de contato</h3>
-      </legend>
+        <legend>
+            <h3><i class="fa fa-user"></i> Dados de contato</h3>
+        </legend>
 
-      <div>
-        <label for="name">Nome</label>
-        <input type="text" name="name" ng-model="data.name" ng-pattern="/^[a-zA-Z\s]*$/" 
-          ng-minlength="3" ng-maxlength="30" required />
-        <p ng-show="app.signupForm.name.$error.minlength">Nome muito curto.</p>
-        <p ng-show="app.signupForm.name.$error.maxlength">Nome muito longo.</p>
-        <p ng-show="app.signupForm.name.$error.pattern">Números e caracteres especiais não são aceitos.</p>
-      </div>
+        <div>
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" ng-model="data.name" ng-pattern="/^[a-zA-Z\s]*$/"
+                   ng-minlength="3" ng-maxlength="30" required/>
+            <p ng-show="app.signupForm.name.$error.minlength">Nome muito curto.</p>
+            <p ng-show="app.signupForm.name.$error.maxlength">Nome muito longo.</p>
+            <p ng-show="app.signupForm.name.$error.pattern">Números e caracteres especiais não são aceitos.</p>
+        </div>
 
-      <div>
-        <label for="name">Telefone</label>
-        <input type="tel" name="phone" ng-model="data.phone" ng-pattern="/^[0-9\(\)-\s]*$/" 
-          ng-minlength="14" ng-maxlength="14" required phone-format />
-        <p ng-show="app.signupForm.phone.$error.minlength">O telefone não é válido.</p>
-        <p ng-show="app.signupForm.phone.$error.maxlength">O telefone não é válido.</p>      
-        <p ng-show="app.signupForm.phone.$error.pattern">O telefone não é válido.</p>
-      </div>
+        <div>
+            <label for="phone">Telefone</label>
+            <input type="tel" id="phone" name="phone" ng-model="data.phone" ng-pattern="/^[0-9\(\)-\s]*$/"
+                   ng-minlength="14" ng-maxlength="14" required/>
+            <p ng-show="app.signupForm.phone.$error.minlength">O telefone é muito curto. Favor usar o formato (XX) XXXX-XXXX</p>
+            <p ng-show="app.signupForm.phone.$error.maxlength">O telefone é muito longo. Favor usar o formato (XX) XXXX-XXXX</p>
+            <p ng-show="app.signupForm.phone.$error.pattern">O telefone não é válido. Favor usar o formato (XX) XXXX-XXXX</p>
+        </div>
 
-      <div>
-        <label for="email">Email</label>
-        <input type="email" name="email" ng-model="data.email" ng-pattern="/^[a-zA-Z0-9\.\-_@\s]*$/" 
-          ng-minlength="3" ng-maxlength="30" required />
-        <p ng-show="app.signupForm.email.$error.minlength">Email muito curto.</p>
-        <p ng-show="app.signupForm.email.$error.maxlength">Email muito longo.</p>
-        <p ng-show="app.signupForm.email.$error.email">Email não é válido.</p>
-        <p ng-show="app.signupForm.email.$error.pattern">Números e caracteres especiais não são aceitos.</p>     
-      </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" ng-model="data.email" ng-pattern="/^[a-zA-Z0-9\.\-_@\s]*$/"
+                   ng-minlength="3" ng-maxlength="30" required/>
+            <p ng-show="app.signupForm.email.$error.minlength">Email muito curto.</p>
+            <p ng-show="app.signupForm.email.$error.maxlength">Email muito longo.</p>
+            <p ng-show="app.signupForm.email.$error.email">Email não é válido.</p>
+            <p ng-show="app.signupForm.email.$error.pattern">Números e caracteres especiais não são aceitos.</p>
+        </div>
     </fieldset>
 
     <fieldset>
-      <input type="submit" ng-click="app.save(data)" value="Salvar" ng-disabled="app.signupForm.$invalid" />
-      <input type="button" ng-click="app.reset()" value="Cancelar" />    
+        <input type="submit" ng-click="app.save(data)" value="Salvar" ng-disabled="app.signupForm.$invalid"/>
+        <input type="button" ng-click="app.reset()" value="Cancelar"/>
     </fieldset>
 
-  </form>
+</form>
 
-  <hr>
+<hr>
 
-  <h2>Lista de contatos</h2>
-  <table>   
+<h2>Lista de contatos</h2>
+<table>
     <tbody>
-      <tr ng-repeat="contact in app.contacts">
-        <td><b>{{contact.name}}</b> <br> {{contact.phone}} - <a href="mailto:{{contact.email}}">{{contact.email}}</a><hr></td>
-      </tr>
+    <tr ng-repeat="contact in app.contacts">
+        <td><b>{{contact.name}}</b> <br> {{contact.phone}} - <a href="mailto:{{contact.email}}">{{contact.email}}</a>
+            <hr>
+        </td>
+    </tr>
     </tbody>
-  </table>   
+</table>
 
 <script src="scripts/directives.js"></script>
-  <script src="scripts/controller.js"></script>
+<script src="scripts/controller.js"></script>
+<script src="//localhost:35729/livereload.js"></script>
 </body>
 
 </html>
